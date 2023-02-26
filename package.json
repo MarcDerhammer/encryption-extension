@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "webpack --config webpack/webpack.prod.js",
+    "build": "rimraf dist && webpack --config webpack/webpack.prod.js",
     "clean": "rimraf dist",
     "test": "npx jest",
     "style": "prettier --write \"src/**/*.{ts,tsx}\""
@@ -17,10 +17,13 @@
     "url": "https://github.com/chibat/chrome-extension-typescript-starter.git"
   },
   "dependencies": {
+    "buffer": "^6.0.3",
+    "openpgp": "^5.7.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@openpgp/web-stream-tools": "^0.0.13",
     "@types/chrome": "0.0.158",
     "@types/jest": "^27.0.2",
     "@types/react": "^17.0.0",
