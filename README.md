@@ -21,6 +21,6 @@ Select which recipients can read it from your list of public keys. It can be one
 
 Todo:
 
-[ ] - Passphrases
-[ ] - Files
-[ ] - Signatures
+- Passphrases
+- Files
+- Signatures
