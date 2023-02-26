@@ -109,12 +109,12 @@ const EncryptTab = (props: EncryptProps) => {
                     {/* list all the keys that can decrypt it */}
                     {selectedPublicKeys.map((key, index) => {
                         return (
-                            <div key={index}>
+                            <span key={index}>
                                 <span style={{
                                     fontWeight: "bold",
                                 }}>{key.getUserIDs()}</span>
                                 {index < selectedPublicKeys.length - 1 ? ", " : "."}
-                            </div>
+                            </span>
                         );
                     })}
                 </label>

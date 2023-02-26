@@ -1,70 +1,18 @@
-# Chrome Extension TypeScript Starter
+# EncryptAway
 
-![build](https://github.com/chibat/chrome-extension-typescript-starter/workflows/build/badge.svg)
+## A chrome extension to easily add encryption anywhere on the web
 
-Chrome Extension, TypeScript and Visual Studio Code
-
-## Prerequisites
-
-* [node + npm](https://nodejs.org/) (Current Version)
-
-## Option
-
-* [Visual Studio Code](https://code.visualstudio.com/)
-
-## Includes the following
-
-* TypeScript
-* Webpack
-* React
-* Jest
-* Example Code
-    * Chrome Storage
-    * Options Version 2
-    * content script
-    * count up badge number
-    * background
-
-## Project Structure
-
-* src/typescript: TypeScript source files
-* src/assets: static files
-* dist: Chrome Extension directory
-* dist/js: Generated JavaScript files
-
-## Setup
-
-```
-npm install
-```
-
-## Import as Visual Studio Code project
-
-...
-
-## Build
-
-```
-npm run build
-```
-
-## Build in watch mode
-
-### terminal
-
-```
-npm run watch
-```
-
-### Visual Studio Code
-
-Run watch mode.
-
-type `Ctrl + Shift + B`
-
-## Load extension to chrome
-
-Load `dist` directory
-
-## Test
-`npx jest` or `npm run test`
+1. First, create a KeyPair in the `Keys` tab
+![Key Generation](./demo-screens/GenerateKey.png)
+1. Share your public key with anyone who will send you a message by using the Export button on the PUBLIC Key
+1. Encrypt text using the `Encrypt` tab
+![Encrypt](./demo-screens/Encrypt.png)
+Select which recipients can read it from your list of public keys. It can be one or many.
+1. Post the text somewhere where your recipient can see it (a website or something)
+1. For most users it will look like this:
+![Encrypted on website](./demo-screens/EncryptedWebContent.png)
+1. However, for anyone with the private key, it will look like this (note the 🔓 representing some content was decrypted)
+![Decrypted on website](./demo-screens/DecryptedWebContent.png)
+1. You can also use the `Decrypt` tab to decrypt messages manually with any of your private keys
+![Decrypt tab](./demo-screens/Decrypt.png)
+1. The 🔓 on the bottom left will attempt to decrypt any messages on the screen in case new encrypted content was loaded
